@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Sentiment Analyzer",
+    "version": "1.0",
+    "description": "Analyzes YouTube video comments for sentiment.",
+    "action": {
+      "default_popup": "pop.html"
+    },
+    "permissions": ["tabs"],
+    "host_permissions": ["https://www.youtube.com/*"],
+    "content_scripts": [
+      {
+        "matches": ["https://www.youtube.com/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
