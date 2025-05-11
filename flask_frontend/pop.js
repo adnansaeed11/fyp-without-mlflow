@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   
     async function getYouTubeComments(videoId) {
-      const url = `https://www.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=${videoId}&key=${YOUTUBE_API_KEY}&maxResults=100`;
+      const url = `https://www.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=${videoId}&key=${YOUTUBE_API_KEY}&maxResults=500`;
       const response = await fetch(url);
       const data = await response.json();
       if (!data.items) throw new Error("No comments found or API limit reached");
